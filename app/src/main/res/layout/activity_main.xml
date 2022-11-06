@@ -7,19 +7,25 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/listFragment"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="0dp"
         android:name="com.example.fragmentdemonstration.ListFragment"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/detailFragment"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toLeftOf="@id/detailFragment"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/detailFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:name="com.example.fragmentdemonstration.DetailFragment"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listFragment"
+        app:layout_constraintLeft_toRightOf="@id/listFragment"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <!-- android:name="com.example.fragmentdemonstration.ListFragment" -->
